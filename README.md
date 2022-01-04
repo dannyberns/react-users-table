@@ -1,8 +1,6 @@
 # Users-Table
 
-Users-Table is a one page application that provides its users with an informative table
-populated with different users using Random User API.
-Each row represents a different user 
+Users-Table is a one page application that provides a table based information about different users.
 
 
 ## Links
@@ -11,16 +9,16 @@ https://react-users-table.netlify.app/
 
 ## Appendix
 
-#### Home - Users
-Contains an informative table of users, populated with different users using Random User API.
-Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..).
+#### Home Page - Users
+Contains an informative table of users, populated with different users using Random User Generator API.
+Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..)
 
-- **Sorting** - Users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
-- **MailTo** - Clicking on users email address, will redirect to compose new email.
-- **User Details** - Clicking on any user row will cause a page redirection to User Details page.
+- **Sorting** - users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
+- **MailTo** - clicking on users email address, will redirect to compose new email.
+- **User Details** - clicking on any user row will cause a page redirection to User Details page.
 
 
-#### Users-Details
+#### Users-Details Page
 Here, all data from chosen user will be displayed alongside Leaflet Map, showing users
 location (using provided coords from the API) as well as a tooltip with their address and city.
 
@@ -29,11 +27,11 @@ location (using provided coords from the API) as well as a tooltip with their ad
 
 ## Screenshots
 
-#### Home - Users
+#### Home Page - Users
 
 ![App Screenshot](https://i.ibb.co/9mxDnn5/users-table-main.png)
 
-#### User Details
+#### User Details Page
 
 ![App Screenshot](https://i.ibb.co/3T1HB6y/users-table-user.png)
 
