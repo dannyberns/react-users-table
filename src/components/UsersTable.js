@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../context/context";
 import UsersTableHead from "./UsersTableHead";
 import UsersTableBody from "./UsersTableBody";
-import CPagination from "./CPagination";
 import { Table, TableContainer, Paper } from "@mui/material";
 
 const UsersTable = () => {

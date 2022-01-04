@@ -9,10 +9,11 @@ import { useTitle } from "../utils/useTitle";
 const SingleUserPage = () => {
   useTitle("User Details");
   const { username } = useParams();
-  const { single_user, users, getSingleUser } = useGlobalContext();
+  const { single_user, getSingleUser } = useGlobalContext();
 
   useEffect(() => {
     getSingleUser(username);
+    // eslint-disable-next-line
   }, [username]);
 
   if (!single_user) return <Loading />;

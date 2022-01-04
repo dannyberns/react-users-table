@@ -4,8 +4,7 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
-  SORT_BY_HEADER,
-  UPDATE_PAGE
+  SORT_BY_HEADER
 } from "../actions";
 import reducer from "../reducer/reducer";
 import axios from "axios";
@@ -28,8 +27,7 @@ const initialState = {
   users_error: false,
   single_user: getStorageUser(),
   sortBy: "",
-  direction: "",
-  page: 1
+  direction: ""
 };
 
 const AppContext = React.createContext();
@@ -52,7 +50,6 @@ const AppProvider = ({ children }) => {
   };
 
   const handlePage = value => {
-    dispatch({ type: UPDATE_PAGE, payload: value });
     fetchUsers(`${API_ENDPOINT}&page=${value}`);
   };
 
@@ -71,7 +68,8 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchUsers(`${API_ENDPOINT}&page=${state.page}`);
+    fetchUsers(`${API_ENDPOINT}&page=1`);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

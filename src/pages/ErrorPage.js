@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Typography, Grid, Button } from "@mui/material/";
+import { Typography } from "@mui/material/";
 
 const ErrorPage = () => {
   return (

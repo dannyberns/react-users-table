@@ -1,4 +1,4 @@
-import { SingleUserPage, HomePage, Test, ErrorPage } from "./pages";
+import { SingleUserPage, HomePage, ErrorPage } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

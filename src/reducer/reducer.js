@@ -3,8 +3,7 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
-  SORT_BY_HEADER,
-  UPDATE_PAGE
+  SORT_BY_HEADER
 } from "../actions";
 
 const reducer = (state, action) => {
@@ -57,11 +56,7 @@ const reducer = (state, action) => {
     const tempUsers = [...state.users];
     console.log(state.single_user);
     console.log(action.payload);
-    if (
-      tempUsers.length > 0 &&
-      // state.single_user &&
-      action.payload !== state.single_user?.name
-    ) {
+    if (tempUsers.length > 0 && action.payload !== state.single_user?.name) {
       console.log(state.users);
       const newUser = tempUsers.find(user => user.name === action.payload);
 
@@ -73,12 +68,6 @@ const reducer = (state, action) => {
 
     return {
       ...state
-    };
-  }
-  if (action.type === UPDATE_PAGE) {
-    return {
-      ...state,
-      page: action.payload
     };
   }
 
