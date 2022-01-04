@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Pagination, Stack } from "@mui/material";
 import { useGlobalContext } from "../context/context";
 
 const CPagination = () => {
-  const { handlePage } = useGlobalContext();
-  const [page, setPage] = useState(1);
+  const { handlePage, page } = useGlobalContext();
   const handleChange = (event, value) => {
     handlePage(value);
-    setPage(value);
   };
 
   return (

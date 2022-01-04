@@ -2,26 +2,30 @@ import React, { useEffect } from "react";
 import { Container, Typography, Grid, Avatar } from "@mui/material/";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context/context";
-import Loading from "../components/Loading";
-import { UserMap, Navbar, Title } from "../components";
+import { UserMap, Navbar, Title, Error, Loading } from "../components";
 import { useTitle } from "../utils/useTitle";
 
-const SingleUserPage = () => {
+const Test = () => {
   useTitle("User Details");
   const { username } = useParams();
-  const { single_user, getSingleUser } = useGlobalContext();
+  const {
+    users,
+    getSingleUser,
+    single_user,
+    single_user_error: error,
+    single_user_loading: loading
+  } = useGlobalContext();
 
   useEffect(() => {
     getSingleUser(username);
     // eslint-disable-next-line
-  }, [username]);
+  }, [users]);
 
-  if (!single_user) return <Loading />;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
-  const { age, email, gender, name, picture, coordinates, city, street } =
-    single_user;
   return (
-    <>
+    single_user && (
       <main>
         <Container maxWidth="lg">
           <Navbar />
@@ -31,16 +35,16 @@ const SingleUserPage = () => {
               <Title />
               <div className="user-details">
                 <div>
-                  <Avatar src={picture.large} className="avatar" />
+                  <Avatar src={single_user.picture.large} className="avatar" />
                   <Typography variant="h5" color="textPrimary" align="center">
-                    {name}
+                    {single_user.name}
                   </Typography>
                   <Typography
                     variant="body2"
                     color="text.secondary"
                     align="center"
                   >
-                    {email}
+                    {single_user.email}
                   </Typography>
                 </div>
                 <div className="user-details-info">
@@ -58,7 +62,7 @@ const SingleUserPage = () => {
                         color="text.secondary"
                         gutterBottom
                       >
-                        {age}
+                        {single_user.age}
                       </Typography>
                     </Grid>
                     <Grid item>
@@ -70,7 +74,7 @@ const SingleUserPage = () => {
                         color="text.secondary"
                         gutterBottom
                       >
-                        {gender}
+                        {single_user.gender}
                       </Typography>
                     </Grid>
                   </Grid>
@@ -78,13 +82,17 @@ const SingleUserPage = () => {
               </div>
             </Grid>
             <Grid item md={8} xs={12}>
-              <UserMap coordinates={coordinates} street={street} city={city} />
+              <UserMap
+                coordinates={single_user.coordinates}
+                street={single_user.street}
+                city={single_user.city}
+              />
             </Grid>
           </Grid>
         </Container>
       </main>
-    </>
+    )
   );
 };
 
-export default SingleUserPage;
+export default Test;

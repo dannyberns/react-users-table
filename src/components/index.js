@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Title from "./Title";
 import UsersTableHead from "./UsersTableHead";
 import UsersTableBody from "./UsersTableBody";
+import Error from "./Error";
 
 export {
   Loading,
@@ -15,5 +16,6 @@ export {
   Navbar,
   Title,
   UsersTableHead,
-  UsersTableBody
+  UsersTableBody,
+  Error
 };

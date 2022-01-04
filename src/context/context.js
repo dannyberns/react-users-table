@@ -4,19 +4,20 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
-  SORT_BY_HEADER
+  GET_STORED_USER,
+  SORT_BY_HEADER,
+  UPDATE_PAGE
 } from "../actions";
 import reducer from "../reducer/reducer";
 import axios from "axios";
 import { constructUsers } from "../utils/helpers";
 
-const getStorageUser = () => {
-  let user = localStorage.getItem("user");
+const getStoragePage = () => {
+  let user = localStorage.getItem("page");
   if (user) {
-    console.log("here");
-    return (user = JSON.parse(localStorage.getItem("user")));
+    return Number(user);
   }
-  return null;
+  return 1;
 };
 
 const API_ENDPOINT = "https://randomuser.me/api/?results=10&seed=abc";
@@ -25,9 +26,12 @@ const initialState = {
   users: [],
   users_loading: false,
   users_error: false,
-  single_user: getStorageUser(),
+  single_user: null,
+  single_user_error: false,
+  single_user_loading: false,
   sortBy: "",
-  direction: ""
+  direction: "",
+  page: getStoragePage()
 };
 
 const AppContext = React.createContext();
@@ -50,7 +54,7 @@ const AppProvider = ({ children }) => {
   };
 
   const handlePage = value => {
-    fetchUsers(`${API_ENDPOINT}&page=${value}`);
+    dispatch({ type: UPDATE_PAGE, payload: value });
   };
 
   const sortByHeader = (header, direction) => {
@@ -67,19 +71,29 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_SINGLE_USER, payload: name });
   };
 
-  useEffect(() => {
-    fetchUsers(`${API_ENDPOINT}&page=1`);
-    // eslint-disable-next-line
-  }, []);
+  const getStoredUser = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    dispatch({ type: GET_STORED_USER, payload: user });
+  };
 
   useEffect(() => {
-    if (state.single_user)
-      localStorage.setItem("user", JSON.stringify(state.single_user));
-  }, [state.single_user]);
+    fetchUsers(`${API_ENDPOINT}&page=${state.page}`);
+    // eslint-disable-next-line
+  }, [state.page]);
+
+  useEffect(() => {
+    localStorage.setItem("page", state.page);
+  }, [state.page]);
 
   return (
     <AppContext.Provider
-      value={{ ...state, handlePage, sortByHeader, getSingleUser }}
+      value={{
+        ...state,
+        handlePage,
+        sortByHeader,
+        getSingleUser,
+        getStoredUser
+      }}
     >
       {children}
     </AppContext.Provider>

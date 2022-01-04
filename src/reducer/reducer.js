@@ -3,7 +3,9 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
-  SORT_BY_HEADER
+  GET_STORED_USER,
+  SORT_BY_HEADER,
+  UPDATE_PAGE
 } from "../actions";
 
 const reducer = (state, action) => {
@@ -52,22 +54,42 @@ const reducer = (state, action) => {
   }
 
   if (action.type === GET_SINGLE_USER) {
-    console.log(state.users);
-    const tempUsers = [...state.users];
-    console.log(state.single_user);
-    console.log(action.payload);
-    if (tempUsers.length > 0 && action.payload !== state.single_user?.name) {
-      console.log(state.users);
-      const newUser = tempUsers.find(user => user.name === action.payload);
-
-      return {
-        ...state,
-        single_user: newUser
-      };
+    const { users } = state;
+    if (users.length > 0) {
+      const tempUser = users.find(user => user.name === action.payload);
+      if (tempUser)
+        return {
+          ...state,
+          single_user: tempUser,
+          single_user_error: false,
+          single_user_loading: false
+        };
+      else {
+        return {
+          ...state,
+          single_user_error: true,
+          single_user_loading: false
+        };
+      }
     }
-
     return {
-      ...state
+      ...state,
+      single_user_error: false,
+      single_user_loading: true
+    };
+  }
+
+  if (action.type === GET_STORED_USER) {
+    return {
+      ...state,
+      single_user: action.payload
+    };
+  }
+
+  if (action.type === UPDATE_PAGE) {
+    return {
+      ...state,
+      page: action.payload
     };
   }
 

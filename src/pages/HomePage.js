@@ -5,6 +5,7 @@ import { Container } from "@mui/material";
 
 const HomePage = () => {
   useTitle("All users");
+
   return (
     <main>
       <Container maxWidth="lg">

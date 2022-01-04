@@ -90,7 +90,7 @@ Global Classes
 }
 
 a:visited {
-  color: none;
+  color: inherit;
 }
 
 .primary-color {
