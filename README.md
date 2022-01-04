@@ -11,7 +11,7 @@ https://react-users-table.netlify.app/
 
 ## Appendix
 
-##### Home - Users
+#### Home - Users
 Contains an informative table of users, populated with different users using Random User API.
 Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..).
 
@@ -20,7 +20,7 @@ Each row represents a different user with his/her personal information. ( I.E pi
 - User Details - Clicking on any user row will cause a page redirection to User Details page.
 
 
-##### Users-Details
+#### Users-Details
 Here, all data from chosen user will be displayed alongside Leaflet Map, showing users
 location (using provided coords from the API) as well as a tooltip with their address and city.
 
