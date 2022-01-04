@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Users-Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users-Table is a one page application that provides its users with an informative table
+populated with different users using Random User API.
+Each row represents a different user 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Links
 
-### `npm start`
+https://react-users-table.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Appendix
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Home - Users
+Contains an informative table of users, populated with different users using Random User API.
+Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..).
 
-### `npm test`
+- Sorting - Users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
+- MailTo - Clicking on users email address, you will be redirected to compose
+- User Details - Clicking on any user row will cause a page redirection to User Details page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+##### Users-Details
+Here, all data from chosen user will be displayed alongside Leaflet Map, showing users
+location (using provided coords from the API) as well as a tooltip with their address and city.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- All users button - redirects to Main page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+#### Home - Users
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App Screenshot](https://i.ibb.co/9mxDnn5/users-table-main.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### User Details
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![App Screenshot](https://i.ibb.co/3T1HB6y/users-table-user.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install Users-Table with npm
 
-### Code Splitting
+```bash
+  # Clone this repository
+  $ git clone https://github.com/dannyberns/react-users-table
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  # Go into the repository
+  $ cd react-users-table
 
-### Analyzing the Bundle Size
+  # Install dependencies
+  $ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  # Run the app
+  $ npm start
+```
+    
+## Tech Stack & Acknowledgements
 
-### Making a Progressive Web App
+- React
+- [Leaflet - Main Docs](https://react-leaflet.js.org/) - React components for Leaflet maps
+- [MUI - Main Docs](https://mui.com/) - React UI library
+- [Random User API - Main Docs](https://randomuser.me/documentation) - Random User Generator API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
