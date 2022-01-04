@@ -62,5 +62,9 @@ Install Users-Table with npm
 - [MUI - Main Docs](https://mui.com/) - React UI library
 - [Random User API - Main Docs](https://randomuser.me/documentation) - Random User Generator API
 
+## Constrains
+
+- Max num of pages - 10
+
 
 
