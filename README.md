@@ -1,6 +1,6 @@
 # Users-Table
 
-Users-Table is a one page application that provides a table based information about different users.
+Users-Table is a responsive one page application that provides a table based information about different users.
 
 
 ## Links
