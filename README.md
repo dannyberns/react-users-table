@@ -16,7 +16,7 @@ Contains an informative table of users, populated with different users using Ran
 Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..).
 
 - Sorting - Users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
-- MailTo - Clicking on users email address, you will be redirected to compose
+- MailTo - Clicking on users email address, will redirect to compose new email.
 - User Details - Clicking on any user row will cause a page redirection to User Details page.
 
 
