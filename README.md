@@ -15,16 +15,16 @@ https://react-users-table.netlify.app/
 Contains an informative table of users, populated with different users using Random User API.
 Each row represents a different user with his/her personal information. ( I.E picture, email, age, etc..).
 
-- Sorting - Users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
-- MailTo - Clicking on users email address, will redirect to compose new email.
-- User Details - Clicking on any user row will cause a page redirection to User Details page.
+- **Sorting** - Users can be sorted (asc/desc) by each of their attributes simply by clicking on the desired attribute table header.
+- **MailTo** - Clicking on users email address, will redirect to compose new email.
+- **User Details** - Clicking on any user row will cause a page redirection to User Details page.
 
 
 #### Users-Details
 Here, all data from chosen user will be displayed alongside Leaflet Map, showing users
 location (using provided coords from the API) as well as a tooltip with their address and city.
 
-- All users button - redirects to Main page.
+- **All users button** - redirects to Main page.
 
 
 ## Screenshots
