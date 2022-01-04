@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../context/context";
 import UsersTableHead from "./UsersTableHead";
 import UsersTableBody from "./UsersTableBody";
+import CPagination from "./CPagination";
 import { Table, TableContainer, Paper } from "@mui/material";
 
 const UsersTable = () => {
@@ -18,16 +19,18 @@ const UsersTable = () => {
   };
 
   return (
-    <TableContainer component={Paper} className="box-shadow">
-      <Table aria-label="simple table">
-        <UsersTableHead
-          orderBy={orderBy}
-          orderDirection={orderDirection}
-          handleRequestSort={handleRequestSort}
-        />
-        <UsersTableBody />
-      </Table>
-    </TableContainer>
+    <>
+      <TableContainer component={Paper} className="box-shadow table-container">
+        <Table aria-label="simple table" stickyHeader>
+          <UsersTableHead
+            orderBy={orderBy}
+            orderDirection={orderDirection}
+            handleRequestSort={handleRequestSort}
+          />
+          <UsersTableBody />
+        </Table>
+      </TableContainer>
+    </>
   );
 };
 

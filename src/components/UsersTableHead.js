@@ -12,9 +12,9 @@ const UsersTableHead = ({ orderBy, orderDirection, handleRequestSort }) => {
       <TableRow className="primary-color">
         {headers.map(header => {
           return (
-            <TableCell key={header.id} className="white-color">
+            <TableCell key={header.id}>
               {header.name === "Picture" ? (
-                header.name
+                <span className="white-color">{header.name}</span>
               ) : (
                 <TableSortLabel
                   className="white-color"

@@ -166,8 +166,29 @@ a:visited {
   color: var(--clr-primary);
 }
 
+.table-container {
+  height: calc(100vh - (5rem + 64px));
+}
+
 @media only screen and (max-width: 450px) {
   .MuiContainer-root {
     padding: 0 !important;
   }
+
+  .grid-mobile-wrap {
+    height: calc(100vh - (56px));
+  }
+}
+
+.MuiTableCell-stickyHeader {
+  background: var(--clr-primary) !important;
+}
+
+.pagination {
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  padding: 2.5rem 0;
 }

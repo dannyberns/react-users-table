@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Pagination, Stack } from "@mui/material";
+import { Typography, Pagination, Stack, TablePagination } from "@mui/material";
 import { useGlobalContext } from "../context/context";
 
 const CPagination = () => {
@@ -11,7 +11,7 @@ const CPagination = () => {
   };
 
   return (
-    <Stack spacing={2} alignItems="center" mt={2}>
+    <Stack className="pagination">
       {/* <Typography>Page: {page}</Typography> */}
       <Pagination
         count={10}

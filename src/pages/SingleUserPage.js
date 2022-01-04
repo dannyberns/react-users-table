@@ -24,67 +24,62 @@ const SingleUserPage = () => {
       <main>
         <Container maxWidth="lg">
           <Navbar />
-          <div className="wrapper">
-            <Grid container className="border-radius box-shadow">
-              <Grid item md={4} xs={12} className="user-details-wrapper">
-                <Title />
-                <div className="user-details">
-                  <div>
-                    <Avatar src={picture.large} className="avatar" />
-                    <Typography variant="h5" color="textPrimary" align="center">
-                      {name}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      align="center"
-                    >
-                      {email}
-                    </Typography>
-                  </div>
-                  <div className="user-details-info">
-                    <Grid
-                      container
-                      justifyContent="space-evenly"
-                      textAlign="center"
-                    >
-                      <Grid item>
-                        <Typography variant="subtitle1" color="textPrimary">
-                          AGE
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          gutterBottom
-                        >
-                          {age}
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="subtitle1" color="textPrimary">
-                          GENDER
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          gutterBottom
-                        >
-                          {gender}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                  </div>
+
+          <Grid container className="border-radius box-shadow grid-mobile-wrap">
+            <Grid item md={4} xs={12} className="user-details-wrapper">
+              <Title />
+              <div className="user-details">
+                <div>
+                  <Avatar src={picture.large} className="avatar" />
+                  <Typography variant="h5" color="textPrimary" align="center">
+                    {name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    align="center"
+                  >
+                    {email}
+                  </Typography>
                 </div>
-              </Grid>
-              <Grid item md={8} xs={12}>
-                <UserMap
-                  coordinates={coordinates}
-                  street={street}
-                  city={city}
-                />
-              </Grid>
+                <div className="user-details-info">
+                  <Grid
+                    container
+                    justifyContent="space-evenly"
+                    textAlign="center"
+                  >
+                    <Grid item>
+                      <Typography variant="subtitle1" color="textPrimary">
+                        AGE
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        gutterBottom
+                      >
+                        {age}
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="subtitle1" color="textPrimary">
+                        GENDER
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        gutterBottom
+                      >
+                        {gender}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
             </Grid>
-          </div>
+            <Grid item md={8} xs={12}>
+              <UserMap coordinates={coordinates} street={street} city={city} />
+            </Grid>
+          </Grid>
         </Container>
       </main>
     </>
