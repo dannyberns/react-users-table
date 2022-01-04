@@ -4,6 +4,7 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
+  DELETE_SINGLE_USER,
   GET_STORED_USER,
   SORT_BY_HEADER,
   UPDATE_PAGE
@@ -76,6 +77,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_STORED_USER, payload: user });
   };
 
+  const deleteSingleUser = () => {
+    dispatch({ type: DELETE_SINGLE_USER });
+  };
+
   useEffect(() => {
     fetchUsers(`${API_ENDPOINT}&page=${state.page}`);
     // eslint-disable-next-line
@@ -92,7 +97,8 @@ const AppProvider = ({ children }) => {
         handlePage,
         sortByHeader,
         getSingleUser,
-        getStoredUser
+        getStoredUser,
+        deleteSingleUser
       }}
     >
       {children}

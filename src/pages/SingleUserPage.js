@@ -13,12 +13,16 @@ const Test = () => {
     getSingleUser,
     single_user,
     single_user_error: error,
-    single_user_loading: loading
+    single_user_loading: loading,
+    deleteSingleUser
   } = useGlobalContext();
 
   useEffect(() => {
     getSingleUser(username);
     // eslint-disable-next-line
+    return () => {
+      deleteSingleUser();
+    };
   }, [users]);
 
   if (loading) return <Loading />;

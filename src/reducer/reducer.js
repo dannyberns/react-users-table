@@ -3,6 +3,7 @@ import {
   GET_USERS_SUCCESS,
   GET_USERS_ERROR,
   GET_SINGLE_USER,
+  DELETE_SINGLE_USER,
   GET_STORED_USER,
   SORT_BY_HEADER,
   UPDATE_PAGE
@@ -90,6 +91,13 @@ const reducer = (state, action) => {
     return {
       ...state,
       page: action.payload
+    };
+  }
+
+  if (action.type === DELETE_SINGLE_USER) {
+    return {
+      ...state,
+      single_user: null
     };
   }
 
