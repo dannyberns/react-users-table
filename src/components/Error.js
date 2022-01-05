@@ -2,9 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material/";
 
-const Error = () => {
+const Error = ({ msg }) => {
+  if (msg === "users")
+    return (
+      <div className="height-70 section">
+        <Typography variant="h5">
+          there was an error... <br /> please try again
+        </Typography>
+      </div>
+    );
+
   return (
-    <main className="section page-100">
+    <main className="section table-container">
       <section>
         <Typography variant="h1">SORRY</Typography>
         <Typography variant="h4">we couldn't find that user</Typography>

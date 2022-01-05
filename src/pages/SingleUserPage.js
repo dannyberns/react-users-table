@@ -26,7 +26,7 @@ const Test = () => {
   }, [users]);
 
   if (loading) return <Loading />;
-  if (error) return <Error />;
+  if (error) return <Error msg="user" />;
 
   return (
     single_user && (

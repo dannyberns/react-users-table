@@ -1,11 +1,12 @@
 import React from "react";
 import { useGlobalContext } from "../context/context";
 import Loading from "./Loading";
+import Error from "./Error";
 import { TableBody, TableCell, TableRow, Avatar } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 
 const UsersTableBody = () => {
-  const { users, users_loading } = useGlobalContext();
+  const { users, users_loading, users_error: error } = useGlobalContext();
   const navigate = useNavigate();
 
   const handleNavigate = (name, e) => {
@@ -19,6 +20,18 @@ const UsersTableBody = () => {
         <TableRow>
           <TableCell colSpan={6}>
             <Loading />
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    );
+  }
+
+  if (error) {
+    return (
+      <TableBody>
+        <TableRow>
+          <TableCell colSpan={6}>
+            <Error msg="users" />
           </TableCell>
         </TableRow>
       </TableBody>

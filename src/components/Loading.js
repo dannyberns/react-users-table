@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="height-75 section">
+    <div className="height-70 section">
       <div className="loading"></div>
     </div>
   );
