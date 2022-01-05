@@ -11,6 +11,7 @@ const UserMap = ({ coordinates, city, street }) => {
       center={[coordinates.latitude, coordinates.longitude]}
       zoom={9}
       className="height-50"
+      zoomControl={false}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
