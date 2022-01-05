@@ -235,4 +235,8 @@ Mobile
   .grid-mobile-wrap {
     height: calc(100vh - (56px));
   }
+
+  .height-50 {
+    height: 40vh;
+  }
 }
