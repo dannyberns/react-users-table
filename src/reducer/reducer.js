@@ -12,14 +12,16 @@ const reducer = (state, action) => {
   if (action.type === GET_USERS_BEGIN) {
     return {
       ...state,
-      users_loading: true
+      users_loading: true,
+      users_error: false
     };
   }
   if (action.type === GET_USERS_SUCCESS) {
     return {
       ...state,
       users: action.payload,
-      users_loading: false
+      users_loading: false,
+      users_error: false
     };
   }
   if (action.type === GET_USERS_ERROR) {
