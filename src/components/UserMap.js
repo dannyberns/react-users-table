@@ -9,12 +9,12 @@ const UserMap = ({ coordinates, city, street }) => {
     <MapContainer
       key={JSON.stringify([coordinates.latitude, coordinates.longitude])}
       center={[coordinates.latitude, coordinates.longitude]}
-      zoom={6}
+      zoom={9}
       className="height-50"
     >
       <TileLayer
-        url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=gll3jw7H7Vt1k5H0SdXa"
-        attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <Marker
         position={[coordinates.latitude, coordinates.longitude]}

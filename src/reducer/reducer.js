@@ -57,7 +57,9 @@ const reducer = (state, action) => {
   if (action.type === GET_SINGLE_USER) {
     const { users } = state;
     if (users.length > 0) {
-      const tempUser = users.find(user => user.name === action.payload);
+      const tempUser = users.find(
+        user => user.name.toLowerCase() === action.payload.toLowerCase()
+      );
       if (tempUser)
         return {
           ...state,

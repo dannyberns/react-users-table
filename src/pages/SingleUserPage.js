@@ -19,10 +19,10 @@ const Test = () => {
 
   useEffect(() => {
     getSingleUser(username);
-    // eslint-disable-next-line
     return () => {
       deleteSingleUser();
     };
+    // eslint-disable-next-line
   }, [users]);
 
   if (loading) return <Loading />;
