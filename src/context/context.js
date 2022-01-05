@@ -5,7 +5,6 @@ import {
   GET_USERS_ERROR,
   GET_SINGLE_USER,
   DELETE_SINGLE_USER,
-  GET_STORED_USER,
   SORT_BY_HEADER,
   UPDATE_PAGE
 } from "../actions";
@@ -72,11 +71,6 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_SINGLE_USER, payload: name });
   };
 
-  const getStoredUser = () => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    dispatch({ type: GET_STORED_USER, payload: user });
-  };
-
   const deleteSingleUser = () => {
     dispatch({ type: DELETE_SINGLE_USER });
   };
@@ -97,7 +91,6 @@ const AppProvider = ({ children }) => {
         handlePage,
         sortByHeader,
         getSingleUser,
-        getStoredUser,
         deleteSingleUser
       }}
     >
