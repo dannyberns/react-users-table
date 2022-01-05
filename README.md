@@ -28,27 +28,27 @@ location (using provided coords from the API) as well as a tooltip with their ad
 ## Screenshots
 
 #### Home Page - Users
-<!-- ![App Screenshot](https://i.ibb.co/9mxDnn5/users-table-main.png) -->
+
 <img src="https://i.ibb.co/9mxDnn5/users-table-main.png" height=400>
 
 #### Home Page - Users (Mobile)
-<!-- ![App Screenshot](https://i.ibb.co/gWyMQSc/users-table-main-mobile.png) -->
+
 <img src="https://i.ibb.co/gWyMQSc/users-table-main-mobile.png" height=400>
 
 #### User Details Page
-<!-- ![App Screenshot](https://i.ibb.co/3T1HB6y/users-table-user.png) -->
+
 <img src="https://i.ibb.co/3T1HB6y/users-table-user.png" height=400>
 
 #### User Details Page (Mobile)
-<!-- ![App Screenshot](https://i.ibb.co/yg4gvZ6/users-table-user-mobile.png) -->
+
 <img src="https://i.ibb.co/yg4gvZ6/users-table-user-mobile.png" height=400>
 
 #### 404
-<!-- ![App Screenshot](https://i.ibb.co/SnDHWPz/users-table-404.png) -->
+
 <img src="https://i.ibb.co/SnDHWPz/users-table-404.png" height=400>
 
 #### User Not Found
-<!-- ![App Screenshot](https://i.ibb.co/nRRKQdG/users-table-notfound.png) -->
+
 <img src="https://i.ibb.co/nRRKQdG/users-table-notfound.png" height=400>
 
 
