@@ -30,7 +30,7 @@ location (using provided coords from the API) as well as a tooltip with their ad
 #### Home Page - Users
 
 ![App Screenshot](https://i.ibb.co/9mxDnn5/users-table-main.png | width=100)
-<img src="https://i.ibb.co/9mxDnn5/users-table-main.png" width="100"
+<img src="https://i.ibb.co/9mxDnn5/users-table-main.png" width="100">
 
 #### Home Page - Users (Mobile)
 
